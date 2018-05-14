@@ -23,10 +23,7 @@ public class IAnimalTest {
 
     }
    
-    /*protected IAnimal getTestInstance(){
-        return null;
-       
-    }*/
+ 
    
     @Test
     public void testBlabla(){
