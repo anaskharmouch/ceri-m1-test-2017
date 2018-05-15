@@ -14,7 +14,9 @@ import fr.univavignon.rodeo.api.ISpecie;
 public class ISpecieTest {
 	
 	static IAnimal animal;
+	
 	static ISpecie specie;
+	
 	static ArrayList<IAnimal> listAnimal;	
 		
 
