@@ -17,16 +17,18 @@ public class IAnimalTest {
    
     
     public static  IAnimal MockAnimal(){
+    	
+    	   	
     	IAnimal animal=Mockito.mock(IAnimal.class);
         Mockito.when(animal.isBoss()).thenReturn(false);
         Mockito.when(animal.getName()).thenReturn("bimbo");
         Mockito.when(animal.getXP()).thenReturn(8);
         Mockito.when(animal.isSecret()).thenReturn(true);
-    
         Mockito.when(animal.isEndangered()).thenReturn(false);
     
         return animal;
-     }
+     
+    }
     
     
     @Test
