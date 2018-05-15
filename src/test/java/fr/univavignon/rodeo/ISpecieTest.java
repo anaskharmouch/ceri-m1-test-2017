@@ -51,12 +51,12 @@ public class ISpecieTest {
 		  
 	  }
 	  
-	  /*@Test
+	  @Test
 		public void testGetAnimals() {
-			ISpecie test = getInstance();
-			assertEquals(test.getAnimals(),listAnimal);
+			
+			assertEquals(specie.getAnimals(),listAnimal);
 	}
-	*/
+	
 }
 	
 	
