@@ -25,7 +25,8 @@ public class IEnvironmentTest {
 
 		
 	    public static  IEnvironment MockEnvironement(){
-	        environement=Mockito.mock(IEnvironment.class);
+	        
+	    	environement=Mockito.mock(IEnvironment.class);
 	        
 	        Mockito.when(environement.getAreas()).thenReturn(1);
 	        specie= ISpecieTest.MockSpecie();
