@@ -1,3 +1,4 @@
+
 package fr.univavignon.rodeo;
 
 
@@ -13,34 +14,43 @@ import static org.mockito.Mockito.mock;
 
 public class IAnimalTest {
 
-    IAnimal animal;
+   static IAnimal animal=null;
    
-    @Before
-    public  void getInstance(){
-        animal=mock(IAnimal.class);
-    when(animal.isBoss()).thenReturn(false);
-    when(animal.getName()).thenReturn("chat");
-    when(animal.getXP()).thenReturn(8);
-    when(animal.isSecret()).thenReturn(true);
     
-    when(animal.isEndangered()).thenReturn(false);
+    public static  IAnimal getInstance(){
+    	IAnimal animal=Mockito.mock(IAnimal.class);
+        Mockito.when(animal.isBoss()).thenReturn(false);
+        Mockito.when(animal.getName()).thenReturn("bimbo");
+        Mockito.when(animal.getXP()).thenReturn(8);
+        Mockito.when(animal.isSecret()).thenReturn(true);
     
+        Mockito.when(animal.isEndangered()).thenReturn(false);
+    
+        return animal;
+     }
    
-
+   
+    public  IAnimal getMockAnimal(){
+    	    	
+    	return getInstance();
+    	
+    	
     }
-   
+    
  
-   //
+   
     @Test
     public void testIsBoss(){
+    	animal =getMockAnimal();
     assertEquals(false,animal.isBoss());
-    System.out.println(animal.getXP());
+  
 
     }
     
     
     @Test
     public void testIsSecret(){
+    	animal =getMockAnimal();
     assertEquals(true,animal.isSecret());
    
 
@@ -48,21 +58,18 @@ public class IAnimalTest {
     
     @Test
     public void testisEndangered(){
+    	animal =getMockAnimal();
     assertEquals(false,animal.isEndangered());
    
 
     }
     @Test
     public void testisgetName(){
-    assertEquals("chat",animal.getName());
+    	animal =getMockAnimal();
+    assertEquals("bimbo",animal.getName());
    
 
     }
     
-    @Test
-    public void testisgetXP(){
-    assertEquals(animal.getXP(),8);
-   
 
-    }
 }
