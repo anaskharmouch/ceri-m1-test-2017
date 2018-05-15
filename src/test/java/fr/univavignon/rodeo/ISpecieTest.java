@@ -5,6 +5,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,15 +30,15 @@ public class ISpecieTest {
 	
 	
 	 @Before
-	    public  void getInstance(){
-	        specie=Mockito.mock(ISpecie.class);
+	 public  void getInstance(){
+	        
+		    specie=Mockito.mock(ISpecie.class);
 	        Mockito.when(specie.getArea()).thenReturn(1);
 	        animal= IAnimalTest.getInstance();
 	        
 	        listAnimal = new ArrayList();
 	        listAnimal.add(animal);
-	        
-	        
+	                
 	        Mockito.when(specie.getAnimals()).thenReturn(listAnimal);
 	        Mockito.when(specie.getName()).thenReturn("la race");
 	        
@@ -48,12 +49,14 @@ public class ISpecieTest {
 		
 		  assertEquals(1, specie.getArea());
 		  
-		  
-		  
-	   
-
-	    }
-	
+	  }
+	  
+	  /*@Test
+		public void testGetAnimals() {
+			ISpecie test = getInstance();
+			assertEquals(test.getAnimals(),listAnimal);
+	}
+	*/
 }
 	
 	
