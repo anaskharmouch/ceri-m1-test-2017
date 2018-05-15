@@ -11,6 +11,8 @@ import fr.univavignon.rodeo.api.IAnimal;;
 
 public class IGameStateTest {
 
+	
+	
 	public static IAnimal animal = IAnimalTest.MockAnimal();
 	public IGameState iGameState =MockGameState();
 	
@@ -25,6 +27,7 @@ public class IGameStateTest {
 		Mockito.doThrow(new IllegalStateException()).when(iGameState).catchAnimal(animal);
 		
 		return iGameState;
+	
 	}
 	
 	
