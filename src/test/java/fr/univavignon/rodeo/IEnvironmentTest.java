@@ -1,37 +1,74 @@
 package fr.univavignon.rodeo;
 
-import java.util.List;
-
-import fr.univavignon.rodeo.api.ISpecie;
-
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+import org.omg.CORBA.Environment;
 
+import fr.univavignon.rodeo.api.IAnimal;
+import fr.univavignon.rodeo.api.IEnvironment;
+import fr.univavignon.rodeo.api.ISpecie;
 
-public class IEnvironmentTest  {
-
+public class IEnvironmentTest {
+	
 	
 
-	
-	@test
-	public void  getAreas()
-	{
-	
-		
-		
-	}
 
-	@test
-	public void getSpecies()
-	{
+	static ISpecie specie;
 	
+	static ArrayList<ISpecie> listSpecies;	
+	static IEnvironment environement;
+
 		
-		
-	}
+	    public static  IEnvironment MockEnvironement(){
+	        environement=Mockito.mock(IEnvironment.class);
+	        
+	        Mockito.when(environement.getAreas()).thenReturn(1);
+	        specie= ISpecieTest.MockSpecie();
+	        
+	        listSpecies = new ArrayList();
+	        listSpecies.add(specie);
+	        
+	        
+	        Mockito.when(environement.getName()).thenReturn("mon environement");
+	        Mockito.when(environement.getSpecies()).thenReturn(listSpecies);
+	        return environement;
+	        
+	 }
+	 
+	 public  IEnvironment getMockEnvironement(){
+	    	
+	    	return MockEnvironement();
+	    	
+	    	
+	    }
+	 
+	 @Test
+	 public void testGetAreas(){
+		environement=MockEnvironement();
+	assertEquals(1,environement.getAreas());	 
+		 
+		 
+	 }
+	 
+	 
+	 @Test
+	 public void testGetSpecies(){
+		 environement=getMockEnvironement();
+		 assertEquals(listSpecies,environement.getSpecies());
+		 
+		 
+		 
+	 }
+	   
+	
+	
+	
+	
+	
 
 }

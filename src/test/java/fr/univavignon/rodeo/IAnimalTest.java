@@ -1,4 +1,3 @@
-
 package fr.univavignon.rodeo;
 
 
@@ -17,7 +16,7 @@ public class IAnimalTest {
    static IAnimal animal=null;
    
     
-    public static  IAnimal getInstance(){
+    public static  IAnimal MockAnimal(){
     	IAnimal animal=Mockito.mock(IAnimal.class);
         Mockito.when(animal.isBoss()).thenReturn(false);
         Mockito.when(animal.getName()).thenReturn("bimbo");
@@ -30,18 +29,13 @@ public class IAnimalTest {
      }
    
    
-    public  IAnimal getMockAnimal(){
-    	    	
-    	return getInstance();
-    	
-    	
-    }
+ 
     
  
    
     @Test
     public void testIsBoss(){
-    	animal =getMockAnimal();
+    	animal =MockAnimal();
     assertEquals(false,animal.isBoss());
   
 
@@ -50,7 +44,7 @@ public class IAnimalTest {
     
     @Test
     public void testIsSecret(){
-    	animal =getMockAnimal();
+    	animal =MockAnimal();
     assertEquals(true,animal.isSecret());
    
 
@@ -58,14 +52,14 @@ public class IAnimalTest {
     
     @Test
     public void testisEndangered(){
-    	animal =getMockAnimal();
+    	animal =MockAnimal();
     assertEquals(false,animal.isEndangered());
    
 
     }
     @Test
     public void testisgetName(){
-    	animal =getMockAnimal();
+    	animal =MockAnimal();
     assertEquals("bimbo",animal.getName());
    
 
