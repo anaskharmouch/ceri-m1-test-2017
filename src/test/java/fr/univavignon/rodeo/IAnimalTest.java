@@ -27,42 +27,40 @@ public class IAnimalTest {
     
         return animal;
      }
-   
-   
- 
     
- 
-   
+    
     @Test
     public void testIsBoss(){
+   
     	animal =MockAnimal();
-    assertEquals(false,animal.isBoss());
-  
-
+        assertEquals(false,animal.isBoss());
+ 
     }
-    
+  
     
     @Test
     public void testIsSecret(){
+ 
     	animal =MockAnimal();
-    assertEquals(true,animal.isSecret());
+        assertEquals(true,animal.isSecret());
    
-
     }
     
+ 
     @Test
     public void testisEndangered(){
+    	
     	animal =MockAnimal();
-    assertEquals(false,animal.isEndangered());
+        assertEquals(false,animal.isEndangered());
    
-
     }
+   
     @Test
     public void testisgetName(){
+    
     	animal =MockAnimal();
-    assertEquals("bimbo",animal.getName());
-   
-
+        assertEquals("bimbo",animal.getName());
+  
     }
     
 
