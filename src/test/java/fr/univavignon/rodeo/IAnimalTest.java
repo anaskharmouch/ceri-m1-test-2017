@@ -14,8 +14,7 @@ public class IAnimalTest {
    
     
     public static  IAnimal MockAnimal(){
-    	
-    	   	
+    	    	   	
     	IAnimal animal=Mockito.mock(IAnimal.class);
         Mockito.when(animal.isBoss()).thenReturn(false);
         Mockito.when(animal.getName()).thenReturn("bimbo");
@@ -27,11 +26,18 @@ public class IAnimalTest {
      
     }
     
+   
+    @Before  
+    public void initialisation(){
+   	 
+    	animal=MockAnimal();
+   	 
+   }
+    
     
     @Test
     public void testIsBoss(){
-   
-    	animal =MockAnimal();
+      	
         assertEquals(false,animal.isBoss());
  
     }
@@ -39,8 +45,7 @@ public class IAnimalTest {
     
     @Test
     public void testIsSecret(){
- 
-    	animal =MockAnimal();
+     	
         assertEquals(true,animal.isSecret());
    
     }
@@ -48,16 +53,14 @@ public class IAnimalTest {
  
     @Test
     public void testisEndangered(){
-    	
-    	animal =MockAnimal();
+    	    	
         assertEquals(false,animal.isEndangered());
    
     }
    
     @Test
     public void testisgetName(){
-    
-    	animal =MockAnimal();
+        	
         assertEquals("bimbo",animal.getName());
   
     }
