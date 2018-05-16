@@ -2,6 +2,7 @@ package fr.univavignon.rodeo;
 
 import java.util.ArrayList;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -27,42 +28,54 @@ public class IGameStateTest {
 	
 	static IEnvironment environement;
 	
-	static IAnimal bimbo =new IAnimalTest().MockAnimal();
+	static IAnimal bimbo = new IAnimalTest().MockAnimal();
 		
 	    public static  IGameState MockGameState(){
 	        
 	    	
-	    	gameState=Mockito.mock(IGameState.class); 
-	        Mockito.when(gameState.getName()).thenReturn("partie State");
+	    	gameState=Mockito.mock(IGameState.class);
+	        
+	    	Mockito.when(gameState.getName()).thenReturn("partie State");
 	        Mockito.when(gameState.getProgression()).thenReturn(70);
 	        specie= ISpecieTest.MockSpecie();
-	        doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(null);
-	        doThrow(new IllegalStateException()).when(gameState).catchAnimal(bimbo);
-	        doThrow(new IllegalArgumentException()).when(gameState).getSpecieLevel(specie);      
-	        Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();
-	         
-	     
+	
 	        
-	        return gameState;
+	        doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(null);
+	        doThrow(new IllegalStateException()).when(gameState).catchAnimal(bimbo);	        
+	        Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();  	  
+	    	
+	    	Mockito.when(gameState.getSpecieLevel(specie)).thenReturn(SpecieLevel.NOVICE);	        
+	        
+	    	return gameState;
 	        
 	 }
 	    
 	    
-	    
+	    @Before  
+	    public void initialisation(){
+	    	
+	    	gameState= MockGameState();
+	   	 
+	    }
 	    
 	    @Test
 	    public void testGetProgression(){
-	    	
-	    	gameState= MockGameState();
+	    		    	
 	    	assertEquals(70,gameState.getProgression());
+	    
 	    }
 	    
 	    
 	    
 	    @Test(expected=IllegalArgumentException.class)
-	    public void testCatchAnimal(){
+	    public void testCatchAnimal(){ISpecie iSpecie = ISpecieTest.MockSpecie();
+		  
+    	
+  	  Mockito.when(gameState.getSpecieLevel(iSpecie)).thenReturn(SpecieLevel.CHAMPION);
+
 	    	
 	    gameState.catchAnimal(null);
+	    
 	    }
 	    
 	    
@@ -70,27 +83,25 @@ public class IGameStateTest {
 	    public void testCatchAnimall(){
 	    	
 	    gameState.catchAnimal(bimbo);
+	    
 	    }
 	    
 	    
 	    
 	    @Test(expected=IllegalStateException.class)
 	    public void testExploreArea(){
-	    	gameState= MockGameState();	
+	    	
 	    gameState.exploreArea();
+	    
 	    }
 	    
 	   
 	    
 	    @Test
 	    public void testGetSpecieLevel(){
-	    	ISpecie iSpecie = ISpecieTest.MockSpecie();
-	  
 	    	
-	    	  Mockito.when(gameState.getSpecieLevel(iSpecie)).thenReturn(SpecieLevel.CHAMPION);
-	    	assertEquals(SpecieLevel.CHAMPION, gameState.getSpecieLevel(iSpecie));
-	    	
-	    	
+	    	assertEquals(SpecieLevel.NOVICE, gameState.getSpecieLevel(specie));
+	    	    	
 	    }
 	    
 	
