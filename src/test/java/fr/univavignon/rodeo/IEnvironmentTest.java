@@ -12,11 +12,11 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class IEnvironmentTest {
 	
-	static ISpecie specie;
+	public static ISpecie specie;
 	
-	static ArrayList<ISpecie> listSpecies;	
+	public static ArrayList<ISpecie> listSpecies;	
 	
-	static IEnvironment environement;
+	public static IEnvironment environement;
 
 		
 	

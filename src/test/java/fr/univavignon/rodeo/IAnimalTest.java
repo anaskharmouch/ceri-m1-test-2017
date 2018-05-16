@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class IAnimalTest {
 
   
-	static IAnimal animal=null;
+	public static IAnimal animal=null;
    
     
     public static  IAnimal mockAnimal(){

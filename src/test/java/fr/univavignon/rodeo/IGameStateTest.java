@@ -18,17 +18,17 @@ import static org.mockito.Mockito.doThrow;
 public class IGameStateTest {
 	
 	
-	static IGameState gameState;
+	public static IGameState gameState;
 	
-	static IEnvironmentProvider environementProvider; 
+	public static IEnvironmentProvider environementProvider; 
 	
-	static ISpecie specie;
+	public static ISpecie specie;
 	
-	static ArrayList<ISpecie> listeSpices;	
+	public static ArrayList<ISpecie> listeSpices;	
 	
-	static IEnvironment environement;
+	public static IEnvironment environement;
 	
-	static IAnimal bimbo = new IAnimalTest().mockAnimal();
+	public static IAnimal bimbo = new IAnimalTest().mockAnimal();
 		
 	    public static  IGameState mockGameState(){
 	        

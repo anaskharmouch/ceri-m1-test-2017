@@ -18,8 +18,9 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class IGameStateProviderTest {
 			
-		static IGameStateProvider gameStateProvider;		
-		static IGameState gameState;	
+	public static IGameStateProvider gameStateProvider;		
+	
+	public static IGameState gameState;	
 				
 		    public static  IGameStateProvider mockGameStateProvider(){		    	
 		    

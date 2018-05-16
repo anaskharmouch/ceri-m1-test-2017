@@ -12,11 +12,11 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class ISpecieTest {
 	
-	static IAnimal animal;
+	public static IAnimal animal;
 	
-	static ISpecie specie;
+	public static ISpecie specie;
 	
-	static ArrayList<IAnimal> listAnimal;	
+	public static ArrayList<IAnimal> listAnimal;	
 		
 	
 	public static  ISpecie mockSpecie(){
