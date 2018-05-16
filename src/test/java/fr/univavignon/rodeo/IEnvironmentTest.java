@@ -36,30 +36,30 @@ public class IEnvironmentTest {
 	        
 	 }
 	 	    
-	    
-	 public  IEnvironment getMockEnvironement(){
+	 
+        @Before  
+	    public void initialisation(){
 	    	
-	    	return MockEnvironement();
-	    	    	
-	    }
-	
+	    	environement=MockEnvironement();
+	   	 
+            }   
+
+  
+ 
+		 @Test
+		 public void testGetAreas(){
+						 
+		     assertEquals(1,environement.getAreas());	 
+			 
+		 }
 	 
-	 @Test
-	 public void testGetAreas(){
-		
-		 environement=MockEnvironement();
-	     assertEquals(1,environement.getAreas());	 
+	 
+		 @Test
+		 public void testGetSpecies(){
+						 
+			 assertEquals(listSpecies,environement.getSpecies());
 		 
-	 }
-	 
-	 
-	 @Test
-	 public void testGetSpecies(){
-		 
-		 environement=getMockEnvironement();
-		 assertEquals(listSpecies,environement.getSpecies());
-	 
-	 }
+		 }
 	   
 	
 	
