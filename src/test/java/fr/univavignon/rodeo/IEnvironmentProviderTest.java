@@ -13,7 +13,6 @@ import fr.univavignon.rodeo.api.IEnvironmentProvider;
 import fr.univavignon.rodeo.api.ISpecie;
 
 
-
 public class IEnvironmentProviderTest {
 
 	
