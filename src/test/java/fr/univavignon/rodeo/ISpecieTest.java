@@ -19,11 +19,11 @@ public class ISpecieTest {
 	static ArrayList<IAnimal> listAnimal;	
 		
 	
-	public static  ISpecie MockSpecie(){
+	public static  ISpecie mockSpecie(){
 	
 		specie=Mockito.mock(ISpecie.class);
 	    Mockito.when(specie.getArea()).thenReturn(1);
-	    animal= IAnimalTest.MockAnimal();
+	    animal= IAnimalTest.mockAnimal();
 	    listAnimal = new ArrayList();
 	    listAnimal.add(animal);          
 	    Mockito.when(specie.getAnimals()).thenReturn(listAnimal);
@@ -38,7 +38,7 @@ public class ISpecieTest {
 	@Before  
     public void initialisation(){
     	 
-		specie =MockSpecie();
+		specie = mockSpecie();
    	 
 		}
 	
