@@ -9,7 +9,6 @@ import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.ISpecie;
 
 
-
 public class ISpecieTest {
 	
 	public static IAnimal animal;
