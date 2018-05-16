@@ -16,8 +16,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.doThrow;
 
 public class IGameStateTest {
-	
-	
+		
 	public static IGameState gameState;
 	
 	public static IEnvironmentProvider environementProvider; 
