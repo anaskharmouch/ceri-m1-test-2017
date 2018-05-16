@@ -9,7 +9,6 @@ import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.ISpecie;
 
 
-
 public class IEnvironmentTest {
 	
 	public static ISpecie specie;
