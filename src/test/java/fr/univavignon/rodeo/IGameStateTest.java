@@ -28,7 +28,7 @@ public class IGameStateTest {
 	
 	static IEnvironment environement;
 	
-	static IAnimal bimbo = new IAnimalTest().MockAnimal();
+	static IAnimal bimbo = new IAnimalTest().mockAnimal();
 		
 	    public static  IGameState MockGameState(){
 	        
@@ -37,7 +37,7 @@ public class IGameStateTest {
 	        
 	    	Mockito.when(gameState.getName()).thenReturn("partie State");
 	        Mockito.when(gameState.getProgression()).thenReturn(70);
-	        specie= ISpecieTest.MockSpecie();
+	        specie= ISpecieTest.mockSpecie();
 	
 	        
 	        doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(null);
@@ -68,7 +68,7 @@ public class IGameStateTest {
 	    
 	    
 	    @Test(expected=IllegalArgumentException.class)
-	    public void testCatchAnimal(){ISpecie iSpecie = ISpecieTest.MockSpecie();
+	    public void testCatchAnimal(){ISpecie iSpecie = ISpecieTest.mockSpecie();
 		  
     	
   	  Mockito.when(gameState.getSpecieLevel(iSpecie)).thenReturn(SpecieLevel.CHAMPION);
