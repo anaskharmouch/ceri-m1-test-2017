@@ -15,7 +15,6 @@ import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.IGameStateProvider;
 import fr.univavignon.rodeo.api.ISpecie;
 
-
 public class IGameStateProviderTest {
 			
 	public static IGameStateProvider gameStateProvider;		
