@@ -37,10 +37,17 @@ public class ISpecieTest {
 	 }
 	 
 	
+	
+	@Before  
+    public void initialisation(){
+    	 
+		specie =MockSpecie();
+   	 
+		}
+	
 	  @Test
 	  public void testGetArea(){
-		  
-		  specie =MockSpecie();
+		  		  
 		  assertEquals(1, specie.getArea());  
 
 	    }
@@ -49,7 +56,6 @@ public class ISpecieTest {
 	  @Test
 	  public void testGetAnimals(){	
 		  
-		  specie =MockSpecie();
 		  assertEquals(listAnimal, specie.getAnimals());  
 
 	    }
