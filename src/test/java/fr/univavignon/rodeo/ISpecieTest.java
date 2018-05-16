@@ -18,7 +18,6 @@ public class ISpecieTest {
 	
 	static ArrayList<IAnimal> listAnimal;	
 		
-
 	
 	public static  ISpecie MockSpecie(){
 	
