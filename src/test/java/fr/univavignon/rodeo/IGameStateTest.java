@@ -30,7 +30,7 @@ public class IGameStateTest {
 	
 	static IAnimal bimbo = new IAnimalTest().mockAnimal();
 		
-	    public static  IGameState MockGameState(){
+	    public static  IGameState mockGameState(){
 	        
 	    	
 	    	gameState=Mockito.mock(IGameState.class);
@@ -54,7 +54,7 @@ public class IGameStateTest {
 	    @Before  
 	    public void initialisation(){
 	    	
-	    	gameState= MockGameState();
+	    	gameState= mockGameState();
 	   	 
 	    }
 	    
