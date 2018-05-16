@@ -10,7 +10,7 @@ public class IAnimalTest {
   
 	public static IAnimal animal=null;
    
-    
+	
     public static  IAnimal mockAnimal(){
     	    	   	
     	IAnimal animal=Mockito.mock(IAnimal.class);
