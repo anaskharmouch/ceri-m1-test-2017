@@ -3,7 +3,7 @@
 ## Author : KHARMOUCH Anas & BOUHARA Faycal
 
 
-[![CircleCI](https://circleci.com/gh/anaskharmouch/ceri-m1-test-2017/tree/master.svg?style=svg)]
+![CircleCI](https://circleci.com/gh/anaskharmouch/ceri-m1-test-2017/tree/master.svg?style=svg)
 
 - [Codacy](https://app.codacy.com/app/anaskharmouch/ceri-m1-test-2017/dashboard)
 
