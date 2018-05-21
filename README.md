@@ -7,6 +7,9 @@
 
 [![codecov](https://codecov.io/gh/anaskharmouch/ceri-m1-test-2017/branch/master/graph/badge.svg)](https://codecov.io/gh/anaskharmouch/ceri-m1-test-2017)
 
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/032151db67ab4ba5a5ca644eed66e254)](https://www.codacy.com/app/anaskharmouch/ceri-m1-test-2017?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=anaskharmouch/ceri-m1-test-2017&amp;utm_campaign=Badge_Grade)
+
 - [Codacy](https://app.codacy.com/app/anaskharmouch/ceri-m1-test-2017/dashboard)
 
 - [CircleCi](https://circleci.com/gh/anaskharmouch)
